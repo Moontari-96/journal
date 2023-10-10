@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thumbnail_view &lt; Journal Intelligence</title>
+    <link rel="stylesheet" href="../../asset/css/swiper.min.css">
+    <link rel="stylesheet" href="../../asset/css/common.css">
+    <link rel="stylesheet" href="../../asset/css/layout.css">
+    <link rel="stylesheet" href="../../asset/css/sub.css">
+</head>
+<body>
+    <div class="wrapper is_sub sub_view"> <!-- 썸네일뷰일 경우 sub_view 추가 -->
+        <!-- 헤더영역 -->
+        <div class="header_area">
+            <div class="header">
+                <div class="wrap">
+                    <h1 class="logo"><a href="javascript:;" title="메인으로 가기"><img src="../../asset/images/main/img_logo.svg" alt="Journal Intelligence"></a></h1>
+                    <ul class="header_util">
+                        <li class="util_01"><a href="javascript:;" class="btn_service"><span>고객센터</span></a></li>
+                        <li class="util_02"><a href="javascript:;" class="btn_basket"><span>장바구니</span></a></li>
+                        <li class="util_03 mob_hidden"><a href="javascript:;" class="btn_mypage"><span>마이페이지</span></a></li>
+                        <li class="util_04"><a href="javascript:;" class="btn_join"><span>회원가입</span></a></li>
+                        <!-- DESC: header 모바일형(w1024이하) 에서 none일경우: .mob_hidden
+                            - 사람모양 아이콘
+                            1.로그인이 되지않을 경우 로그인 화면 이동
+                            2.로그인이 된 경우 마이페이지 이동
+                         -->
+                        <li class="util_05"><a href="javascript:;" class="btn_login"><span>로그인</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gnb">
+                <div class="wrap">
+                    <div class="total_memu">
+                        <ul class="total_dep_01">
+                            <li><a href="javascript:;" class="btn_category"><span>전체 카테고리</span></a>
+                                <div class="total_dep_02_wrap">
+                                    <div class="total_dep_02_box">
+                                        <ul class="total_dep_02">
+                                            <li><a href="javascript:;">문학</a>
+                                                <ul class="total_dep_03">
+                                                    <li><a href="javascript:;">문학이론/역사/비평</a></li>
+                                                    <li><a href="javascript:;">소설</a></li>
+                                                    <li><a href="javascript:;">시</a></li>
+                                                    <li><a href="javascript:;">희곡</a></li>
+                                                    <li><a href="javascript:;">에세이/자서전</a></li>
+                                                    <li><a href="javascript:;">기타 작품집</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="javascript:;">취미/실용/여행</a>
+                                                <ul class="total_dep_03">
+                                                    <li><a href="javascript:;">공예</a></li>
+                                                    <li><a href="javascript:;">정원가꾸기</a></li>
+                                                    <li><a href="javascript:;">여행</a></li>
+                                                    <li><a href="javascript:;">게임</a></li>
+                                                    <li><a href="javascript:;">기타 취미생활</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="javascript:;">생활/요리/건강</a>
+                                                <ul class="total_dep_03">
+                                                    <li><a href="javascript:;">가정과 생활</a></li>
+                                                    <li><a href="javascript:;">요리</a></li>
+                                                    <li><a href="javascript:;">스포츠</a></li>
+                                                    <li><a href="javascript:;">건강</a></li>
+                                                    <li><a href="javascript:;">반려동물</a></li>
+                                                    <li><a href="javascript:;">홈 인테리어</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="javascript:;">인문/사회</a>
+                                                <ul class="total_dep_03">
+                                                    <li><a href="javascript:;">교양</a></li>
+                                                    <li><a href="javascript:;">철학</a></li>
+                                                    <li><a href="javascript:;">심리학</a></li>
+                                                    <li><a href="javascript:;">종교</a></li>
+                                                    <li><a href="javascript:;">역사</a></li>
+                                                    <li><a href="javascript:;">정치학</a></li>
+                                                    <li><a href="javascript:;">법학</a></li>
+                                                    <li><a href="javascript:;">교육학</a></li>
+                                                    <li><a href="javascript:;">사회/문화</a></li>
+                                                    <li><a href="javascript:;">언어학</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="javascript:;">경제/경영</a>
+                                                <ul class="total_dep_03">
+                                                    <li><a href="javascript:;">경제학</a></li>
+                                                    <li><a href="javascript:;">경영학</a></li>
+                                                    <li><a href="javascript:;">마케팅/세일즈</a></li>
+                                                    <li><a href="javascript:;">재무관리</a></li>
+                                                    <li><a href="javascript:;">투자</a></li>
+                                                    <li><a href="javascript:;">취업</a></li>
+                                                    <li><a href="javascript:;">회계</a></li>
+                                                    <li><a href="javascript:;">자기계발</a></li>
+                                                    <li><a href="javascript:;">성공스토리</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="javascript:;">과학/기술</a>
+                                                <ul class="total_dep_03">
+                                                    <li><a href="javascript:;">교양과학</a></li>
+                                                    <li><a href="javascript:;">수학</a></li>
+                                                    <li><a href="javascript:;">생물학/생명공학</a></li>
+                                                    <li><a href="javascript:;">화학/화학공학</a></li>
+                                                    <li><a href="javascript:;">지구과학/천문학</a></li>
+                                                    <li><a href="javascript:;">물리학</a></li>
+                                                    <li><a href="javascript:;">환경공학</a></li>
+                                                    <li><a href="javascript:;">기계공학</a></li>
+                                                    <li><a href="javascript:;">의학</a></li>
+                                                    <li><a href="javascript:;">컴퓨터</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="javascript:;">ELT/수험서</a>
+                                                <ul class="total_dep_03">
+                                                    <li><a href="javascript:;">ELT</a></li>
+                                                    <li><a href="javascript:;">수험서</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="javascript:;">BEST</a></li>
+                            <li><a href="javascript:;">NEW</a></li>
+                            <li><a href="javascript:;">EVENT</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn_menu">
+                        <div class="search_area">
+                            <div class="mob_btn_area mob_search_area">
+                                <a href="javascript:;" class="mob_btn_search is_open"><span class="blind">검색</span></a>
+                                <a href="javascript:;" class="mob_btn_close"><span class="blind">닫기</span></a>
+                            </div>
+                            <div class="search_box_wrap">
+                                <div class="search_box">
+                                    <div class="form_search">
+                                        <input type="text" placeholder="어떤 도서를 찾고 계신가요?" title="도서검색">
+                                        <a href="javascript:;" class="btn_search"><span class="blind">검색</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //헤더영역 -->
+        <!-- 바디영역 -->
+        <div class="body_area">
+            <!-- breadcumbs: pc용 -->
+            <div class="breadcrumbs is_pc">
+                <div class="wrap">    
+                    <ul class="location">
+                        <li><a href="javascript:;" class="home"><span class="blind">home</span></a></li>
+                        <li><a href="javascript:;">1depth</a>
+                            <div class="depth_box">
+                                <ul>
+                                    <li><a href="javascript:;" class="is_active">1depth_01(현재depth)</a></li>
+                                    <li><a href="javascript:;">1depth_02</a></li>
+                                    <li><a href="javascript:;">1depth_03</a></li>
+                                    <li><a href="javascript:;">1depth_04</a></li>
+                                    <li><a href="javascript:;">1depth_05</a></li>
+                                    <li><a href="javascript:;">1depth_06</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="javascript:;">2depth</a>
+                            <div class="depth_box">
+                                <ul>
+                                    <li><a href="javascript:;" class="is_active">2depth_01(현재depth)</a></li>
+                                    <li><a href="javascript:;">2depth_02</a></li>
+                                    <li><a href="javascript:;">2depth_03</a></li>
+                                    <li><a href="javascript:;">2depth_04</a></li>
+                                    <li><a href="javascript:;">2depth_05</a></li>
+                                    <li><a href="javascript:;">2depth_06</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="active"><a href="javascript:;">3depth</a>
+                            <div class="depth_box">
+                                <ul>
+                                    <li><a href="javascript:;" class="is_active">3depth_01(현재depth)</a></li>
+                                    <li><a href="javascript:;">3depth_02</a></li>
+                                    <li><a href="javascript:;">3depth_03</a></li>
+                                    <li><a href="javascript:;">3depth_04</a></li>
+                                    <li><a href="javascript:;">3depth_05</a></li>
+                                    <li><a href="javascript:;">3depth_06</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //breadcumbs: pc용 -->
+            <!-- 바디콘텐츠 -->
+            <div class="body_con view">
+                <div class="wrap">
+                    <!-- snb_area-->
+                    <!-- DESC: 개발에서 .snb_area의 .2depth 고정 선택시 '.is_active' 추가해주세요. -->
+                    <div class="snb_area">
+                        <ul class="dep_01">
+                            <li><a href="javascript:;"><h2 class="snlist_title">1depth </h2></a>
+                                <ul class="dep_02 dep_ty02">
+                                    <li><a href="javascript:;">2depth<span class="ico_plus"></span></a>
+                                        <ul class="dep_03">
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">2depth<span class="ico_plus"></span></a>
+                                        <ul class="dep_03">
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">2depth<span class="ico_plus"></span></a>
+                                        <ul class="dep_03">
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">2depth<span class="ico_plus"></span></a>
+                                        <ul class="dep_03">
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">2depth<span class="ico_plus"></span></a>
+                                        <ul class="dep_03">
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">2depth<span class="ico_plus"></span></a>
+                                        <ul class="dep_03">
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">2depth<span class="ico_plus"></span></a>
+                                        <ul class="dep_03">
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">2depth<span class="ico_plus"></span></a>
+                                        <ul class="dep_03">
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                            <li><a href="javascript:;">3depth</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>                          
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //snb_area -->
+                    <!-- 콘텐츠영역 -->
+                    <div class="con_wrap">
+                        <!-- 콘텐츠 타이틀영역 -->
+                        <div class="title_box">
+                            <!-- <h3 class="con_tit">3depth_제목</h3> -->
+                            <!-- breadcumbs: mob용 -->
+                            <div class="breadcrumbs is_mob">
+                                <ul class="location">
+                                    <li><a href="javascript:;" class="home"><span class="blind">home</span></a></li>
+                                    <li>
+                                        <div class="form_select">
+                                            <select title="1depth">
+                                                <option>1depth_01</option>
+                                                <option>1depth_02</option>
+                                                <option>1depth_03</option>
+                                                <option>1depth_04</option>
+                                                <option>1depth_05</option>
+                                                <option>1depth_06</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form_select">
+                                            <select title="2depth">
+                                                <option>2depth_01</option>
+                                                <option>2depth_02</option>
+                                                <option>2depth_03</option>
+                                                <option>2depth_04</option>
+                                                <option>2depth_05</option>
+                                                <option>2depth_06</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="active">
+                                        <div class="form_select">
+                                            <select title="3depth">
+                                                <option>3depth_01</option>
+                                                <option>3depth_02</option>
+                                                <option>3depth_03</option>
+                                                <option>3depth_04</option>
+                                                <option>3depth_05</option>
+                                                <option>3depth_06</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //breadcumbs: mob용 -->
+                        </div>
+                        <!-- //콘텐츠 타이틀영역 -->
+                        <!-- 실콘텐츠 -->
+                        <div class="contents">
+                            <!-- 상품정보 -->
+                            <div class="book_view">
+                                <div class="img_box">
+                                    <img src="../../asset/images/sub/img_thum_view.png" alt="대체텍스트">
+                                </div>
+                                <div class="book_desc">
+                                    <div class="titbox_con">
+                                        <strong class="titbox_tit">How Emotions Are Made Research for Designers</strong> 
+                                        <span class="publish"><span class="author">저자</span>Lisa Feldman Barrett</span>
+                                    </div>
+                                    <div class="price_box">
+                                        <span class="percent">30%</span>
+                                        <span class="price">18,000</span>
+                                        <span class="sal_price">20,000</span>
+                                    </div>
+                                    <div class="info_box">
+                                        <strong class="info_tit">도서정보</strong>
+                                        <div class="info_cont">
+                                            <dl>
+                                                <dt>출판사</dt>
+                                                <dd>Mariner Books</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>발행일</dt>
+                                                <dd>2014.11</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>ISBN</dt>
+                                                <dd>9111222333</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>언어</dt>
+                                                <dd>영어</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>총권수</dt>
+                                                <dd>144쪽</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>사이즈</dt>
+                                                <dd>356 x 279</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="info_box delivery">
+                                        <strong class="info_tit">배송정보</strong>
+                                        <div class="info_cont">
+                                            <dl>
+                                                <dt>배송비</dt>
+                                                <dd>무료배송</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>배송예정</dt>
+                                                <dd>1일 이내 출고 (주말, 공휴일제외)</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 상품정보 -->
+                            <!-- 인포페이지 -->
+                            <div class="book_txt_wrap">
+                                <!-- 상품정보 -->
+                                <div class="pdtInfo">
+                                    <div class="pdtInfo_ct">
+                                        <p class="book_ct_tit">상품정보</p>
+                                    </div>
+                                    <div class="book_ct_cont txt">
+                                        <p>
+                                            The Comparative Guide to Nutritional SupplementsTM, 6th edition, is far more than an update: the guide has been completely rewritten in light of recent groundbreakingdiscoveries from
+                                            the world of nutritional research. A huge change in our scientific understanding of how dietary antioxidants really work required a huge change in the guide; with the release of our latest
+                                            edition, this is just what NutriSearch provides.
+                                            Very recent scientific evidence has now established that most dietary antioxidants do not work the way we thought they did. Rather than confront aggressive and powerful free radicals
+                                            in direct hand-to-hand combat, biologically relevant antioxidants activate the cell s own HEAVY GUNS its endogenous antioxidant defences, honed over two billion years of evolution.
+                                            <br><br>
+                                            This emergent scientific understanding in cellular antioxidant defence is a real game-changer. It presents a quantum perceptual leap a paradigm shift for an industry where very
+                                            few players are even aware that the game itself has been transformed.
+                                            * Learn how the immutable laws of quantum chemistry and reaction kinetics rule against direct free radical scavenging by common antioxidants.
+                                            * Read how science has, for decades, inadvertently focused on the wrong antioxidants.
+                                            * Examine how plant-based antioxidants can paradoxically change into oxidants, capable of tapping evolutionarily conserved mechanisms of cell signalling to trigger key genetic switches.
+                                            * Find out how nuclear transcription factor Nrf2, a key ON/OFF switch that controls expression of over 500 genes, can influence oxidative stress, inflammation, disease resistance, and
+                                            progression of the aging process itself.
+                                            * Discover how the practice of calorie restriction, regular exercise, and the consumption of select plant-based nutrients may improve both our healthspan and our lifespan.
+                                            
+                                            With exhaustive market research on over 1,600 nutritional supplements in the United States, Canada, Mexico, and Colombia, find out how our completely revised analytical criteria now
+                                            incorporating the exciting science of cell signalling rate your favourite nutritional products.    
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- QNA -->
+                                <div class="pdtInfo qna">
+                                    <div class="pdtInfo_ct">
+                                        <p class="book_ct_tit">Q&A</p>
+                                        <div class="btn_wrap btn_pc">
+                                            <div class="fr">
+                                                <div class="btn_box"><button type="button" class="base_s white"><span>자세히보기</span></button></div>
+                                                <div class="btn_box"><button type="button" class="base_s black"><span>문의하기</span></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_wrap btn_mob">
+                                            <div class="fr">
+                                                <div class=""><button type="button" class="ico_plus"><span>자세히보기</span></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book_ct_cont">
+                                        <div class="board">
+                                            <div class="qna">
+                                                <table class="list_table">
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:100px;" class="num">
+                                                        <col style="width: auto;" class="title">
+                                                        <col style="width: 150px;" class="type">
+                                                        <col style="width: 150px;" class="writer">
+                                                        <col style="width: 150px;" class="date">
+                                                        <col style="width: 100px;" class="hits">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="num">번호</th>
+                                                            <th class="title">제목</th>
+                                                            <th class="type">문의유형</th>
+                                                            <th class="writer">작성자</th>
+                                                            <th class="date">작성일</th>
+                                                            <th class="hits">조회수</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="num">1</td>
+                                                            <td class="title"><a href="javascript:;"><span>상품문의드려요</span><i class="ico_lock"><span class="blind">비밀글</span></i></a></td>
+                                                            <td class="type">배송문의</td>
+                                                            <td class="writer">ab*****</td>
+                                                            <td class="date">2023.01.01</td>
+                                                            <td class="hits">0</td>
+                                                        </tr>
+                                                        <tr class="reply_qna">
+                                                            <td class="num">1</td>
+                                                            <td class="title"><a href="javascript:;"><i class="ico_answer"><span class="blind">답글</span></i><span>상품문의드려요</span><i class="ico_lock"><span class="blind">새글</span></i></a></td>
+                                                            <td class="type">배송문의</td>
+                                                            <td class="writer">ab*****</td>
+                                                            <td class="date">2023.01.01</td>
+                                                            <td class="hits">0</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="btn_wrap ty01_03_col btn_mob">
+                                            <div class="fl">
+                                                <div class="btn_box"><button type="button" class="base_s black"><span>문의하기</span></button></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- 페이지네이션 -->
+                                        <div class="pagination view">
+                                            <div class="pagination_left">
+                                                <a href="javascript:;" title="처음 목록으로" class="first">
+                                                    <i class="icon-arr-all-left"><span class="blind">처음 목록으로</span></i>
+                                                </a>
+                                                <a href="javascript:;" title="이전 목록으로" class="prev">
+                                                    <i class="icon-arr-pre"><span class="blind">이전 목록으로</span></i>
+                                                </a>
+                                            </div>
+                                            <ul>
+                                                <li class="is_active"><a href="javascript:;" title="현재페이지">1</a></li>
+                                                <li><a href="javascript:;" title="2페이지로 이동">2</a></li>
+                                                <li><a href="javascript:;" title="3페이지로 이동">3</a></li>
+                                                <li><a href="javascript:;" title="4페이지로 이동">4</a></li>
+                                                <li><a href="javascript:;" title="5페이지로 이동">5</a></li>
+                                                <li><a href="javascript:;" title="6페이지로 이동">6</a></li>
+                                                <li><a href="javascript:;" title="7페이지로 이동">7</a></li>
+                                                <li><a href="javascript:;" title="8페이지로 이동">8</a></li>
+                                                <li><a href="javascript:;" title="9페이지로 이동">9</a></li>
+                                                <li><a href="javascript:;" title="10페이지로 이동">10</a></li>
+                                            </ul>
+                                            <div class="pagination_right">
+                                                <a href="javascript:;" title="다음 목록으로" class="next is_active">
+                                                    <i class="icon-arr-next"><span class="blind">다음 목록으로</span></i>
+                                                </a>
+                                                <a href="javascript:;" title="마지막 목록으로" class="last is_active">
+                                                    <i class="icon-arr-all-right"><span class="blind">마지막 목록으로</span></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- //페이지네이션 -->
+                                    </div>
+                                </div>
+                                <!-- QNA -->
+                                <!-- 교환/반품/품절 -->
+                                <div class="pdtInfo return">
+                                    <div class="pdtInfo_ct">
+                                        <p class="book_ct_tit">교환/반품/품절 안내</p>
+                                        <div class="btn_wrap ty02_01">
+                                            <div class="fr">
+                                                <div class="btn_box">
+                                                    <button type="button" class="base_s black"><span>반품/교환 신청</span></button>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="book_ct_cont">
+                                        
+                                        <div class="return_box">
+                                            <table class="list_view">
+                                                <caption>Q&A : 번호, , 제목 , 작성자, 작성일 , 조회수 정보 제공</caption>
+                                                <colgroup>
+                                                    <col style="width:33%;">
+                                                    <col style="width: auto;">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>반품/교환 방법</th>
+                                                        <td>마이페이지 > 고객센터 게시글 작성 또는 고객센터 (02-322-2426)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>반품/교환가능 기간</th>
+                                                        <td>변심반품의 경우 수령 후 7일 이내, 상품의 결함 및 계약내용과 다를 경우 문제점 발견 후 30일 이내</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>반품/교환비용</th>
+                                                        <td>변심 혹은 구매착오로 인한 반품/교환은 반송료 고객 부담</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>반품/교환 불가 사유</th>
+                                                        <td>1) 소비자의 책임 있는 사유로 상품 등이 손실 또는 훼손된 경우 (단지 확인을 위한 포장 훼손은 제외)<br>
+                                                        2) 소비자의 사용, 포장 개봉에 의해 상품 등의 가치가 현저히 감소한 경우 예) 화장품, 식품, 가전제품(악세서리 포함) 등<br>
+                                                        3) 복제가 가능한 상품 등의 포장을 훼손한 경우 예) 음반/DVD/비디오, 소프트웨어, 만화책, 잡지, 영상 화보집<br>
+                                                        4) 소비자의 요청에 따라 개별적으로 주문 제작되는 상품의 경우 ((1)해외주문도서)<br>
+                                                        5) 디지털 컨텐츠인 eBook, 오디오북 등을 1회 이상 다운로드를 받았을 경우<br>
+                                                        6) 시간의 경과에 의해 재판매가 곤란한 정도로 가치가 현저히 감소한 경우<br>
+                                                        7) 전자상거래 등에서의 소비자보호에 관한 법률이 정하는 소비자 청약철회 제한 내용에 해당되는 경우</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>상품 품절</th>
+                                                        <td>공급사(출판사) 재고 사정에 의해 품절/지연될 수 있으며, 품절 시 관련 사항에 대해서는 이메일과 문자로 안내드리겠습니다.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>소비자 피해보상 환불 지연에 따른 배상</th>
+                                                        <td>1) 상품의 불량에 의한 교환, A/S, 환불, 품질보증 및 피해보상 등에 관한 사항은 소비자분쟁 해결 기준에 준하여 처리됨<br>
+                                                            2) 대금 환불 및 환불지연에 따른 배상금 지급 조건, 절차 등은 전자상거래 등에서의 소비자 보호에 관한 법률에 따라 처리함
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 교환/반품/품절 -->
+                            </div>
+                            <!-- 인포페이지 -->
+                        </div>
+                        <!-- //실콘텐츠 -->
+                    </div>
+                    <!-- //콘텐츠영역 -->
+                </div>
+            </div>
+            <!-- //바디콘텐츠 -->
+        </div>
+        <!-- //바디영역 -->
+        <!-- 장바구니 퀵메뉴 -->
+        <div class="cart_wrapper">
+            <div class="cart_area">
+                <div class="cart_box wrap">
+                    <div class="left">
+                        <span class="price_txt">총 상품 금액</span>
+                        <span class="price_info">
+                            <span class="val">18,000</span>
+                            <span class="price">원</span>
+                        </span>
+                    </div>
+                    <div class="right">
+                        <div class="count_wrap">
+                            <button type="button" class="minus">감소</button>
+                            <input type="text" class="inp" value="1" >
+                            <button type="button" class="plus">증가</button>
+                        </div>
+                        <div class="btn_wrap ty01_01_fixed">
+                            <div class="fl">
+                                
+                                <div class="btn_box"><button type="button" class="base_l white ico_basket m_ico"><span>장바구니</span></button></div>
+                                <div class="btn_box"><button type="button" class="base_l orange ico_view"><span>상세보기</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart_area_mob">
+                <div class="cart_box_mob">
+                    <div class="buy_btn">
+                        <div class="btn_wrap ty01_01_fixed btn_acrd">
+                            <div class="fl">
+                                <div class="btn_box accordion-hidden"><button type="button" class="base_l white ico_basket"><span>장바구니</span></button></div>
+                                <div class="btn_box"><button type="button" class="base_l orange ico_view"><span>바로구매</span></button></div>
+                            </div>
+                        </div>
+                        <div class="panel_content">
+                            <div class="top">
+                                <p>주문수량</p>
+                                <div class="count_wrap">
+                                    <button type="button" class="minus">감소</button>
+                                    <input type="text" class="inp" value="1" >
+                                    <button type="button" class="plus">증가</button>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <span class="price_txt">총 상품 금액</span>
+                                <span class="price_info">
+                                    <span class="val">29,600</span>
+                                    <span class="price">원</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="acrd_tab">
+                            <span class="acrd_tab_ico">닫기버튼</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 장바구니 퀵메뉴 -->
+        <!-- 퀵메뉴영역 -->
+        <div class="quick_area">
+            <div class="wrap">
+                <ul class="quick_box">
+                    <li class="quick_history">
+                        <!-- DESC: 히스토리내역 있을 때 is_active -->
+                        <a href="javascript:;" class="btn_cir btn_history is_num" data-popup="pop_history"><img src="../../asset/images/main/ico_btn_history.svg" alt="history"><span class="history_num">5</span></a>
+                        <!-- 퀵메뉴팝업 -->
+                        <div class="pop_area pop_history" data-popup-con="pop_history">
+                            <div class="pop_box">
+                                <div class="pop_header">
+                                    <h2 class="pop_tit">최근 본 도서</h2>
+                                </div>
+                                <div class="pop_body">
+                                    <div class="total_box">
+                                        <div class="total_txt">총 <em>5</em>건</div>
+                                        <a href="javascript:;" class="ico_delate">전체삭제</a>
+                                    </div>
+                                    <div class="pop_contents c_scroll">
+                                        <ul class="book_list">
+                                            <li>
+                                                <div class="book_item">
+                                                    <a href="javascript:;" class="img_box">
+                                                        <img src="../../asset/images/main/@bg_newbook_01.png" onerror="this.onerror=null; this.src='../../asset/images/main/img_noimage.svg'" alt="대체텍스트">
+                                                    </a>
+                                                    <div class="book_desc">
+                                                        <div class="book_top">
+                                                            <div class="titbox_con">
+                                                                <strong class="titbox_tit">title title title title title title title title title title title title title title title title</strong> 
+                                                                <span class="publish">writer writer writer writer writer writer writer writer writer writer writer writer writer writer</span>
+                                                            </div>
+                                                            <div class="price_box">
+                                                                <span class="percent">30%</span>
+                                                                <span class="price">18,000</span>
+                                                                <span class="sal_price">20,000</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn_wrap ty01_01_pop">
+                                                            <div class="fl">
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_basket"><span class="blind">삭제</span></button></div>
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_delate"><span class="blind">상세보기</span></button></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="book_item">
+                                                    <a href="javascript:;" class="img_box">
+                                                        <img src="../../asset/images/main/@bg_newbook_02.png" onerror="this.onerror=null; this.src='../../asset/images/main/img_noimage.svg'" alt="대체텍스트">
+                                                    </a>
+                                                    <div class="book_desc">
+                                                        <div class="titbox_con">
+                                                            <strong class="titbox_tit">title</strong> 
+                                                            <span class="publish">writer</span>
+                                                        </div>
+                                                        <div class="price_box">
+                                                            <span class="percent">30%</span>
+                                                            <span class="price">18,000</span>
+                                                            <span class="sal_price">20,000</span>
+                                                        </div>
+                                                        <div class="btn_wrap ty01_01_pop">
+                                                            <div class="fl">
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_basket"><span class="blind">삭제</span></button></div>
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_delate"><span class="blind">상세보기</span></button></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="book_item">
+                                                    <a href="javascript:;" class="img_box">
+                                                        <img src="../../asset/images/main/@bg_newbook_03.png" onerror="this.onerror=null; this.src='../../asset/images/main/img_noimage.svg'" alt="대체텍스트">
+                                                    </a>
+                                                    <div class="book_desc">
+                                                        <div class="titbox_con">
+                                                            <strong class="titbox_tit">title</strong> 
+                                                            <span class="publish">writer</span>
+                                                        </div>
+                                                        <div class="price_box">
+                                                            <span class="percent">30%</span>
+                                                            <span class="price">18,000</span>
+                                                            <span class="sal_price">20,000</span>
+                                                        </div>
+                                                        <div class="btn_wrap ty01_01_pop">
+                                                            <div class="fl">
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_basket"><span class="blind">삭제</span></button></div>
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_delate"><span class="blind">상세보기</span></button></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="book_item">
+                                                    <a href="javascript:;" class="img_box">
+                                                        <img src="../../asset/images/main/@bg_newbook_01.png" onerror="this.onerror=null; this.src='../../asset/images/main/img_noimage.svg'" alt="대체텍스트">
+                                                    </a>
+                                                    <div class="book_desc">
+                                                        <div class="titbox_con">
+                                                            <strong class="titbox_tit">title</strong> 
+                                                            <span class="publish">writer</span>
+                                                        </div>
+                                                        <div class="price_box">
+                                                            <span class="percent">30%</span>
+                                                            <span class="price">18,000</span>
+                                                            <span class="sal_price">20,000</span>
+                                                        </div>
+                                                        <div class="btn_wrap ty01_01_pop">
+                                                            <div class="fl">
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_basket"><span class="blind">삭제</span></button></div>
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_delate"><span class="blind">상세보기</span></button></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="book_item">
+                                                    <a href="javascript:;" class="img_box">
+                                                        <img src="../../asset/images/main/@bg_newbook_02.png" onerror="this.onerror=null; this.src='../../asset/images/main/img_noimage.svg'" alt="대체텍스트">
+                                                    </a>
+                                                    <div class="book_desc">
+                                                        <div class="titbox_con">
+                                                            <strong class="titbox_tit">title</strong> 
+                                                            <span class="publish">writer</span>
+                                                        </div>
+                                                        <div class="price_box">
+                                                            <span class="percent">30%</span>
+                                                            <span class="price">18,000</span>
+                                                            <span class="sal_price">20,000</span>
+                                                        </div>
+                                                        <div class="btn_wrap ty01_01_pop">
+                                                            <div class="fl">
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_basket"><span class="blind">삭제</span></button></div>
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_delate"><span class="blind">상세보기</span></button></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="book_item">
+                                                    <a href="javascript:;" class="img_box">
+                                                        <img src="../../asset/images/main/@bg_newbook_03.png" onerror="this.onerror=null; this.src='../../asset/images/main/img_noimage.svg'" alt="대체텍스트">
+                                                    </a>
+                                                    <div class="book_desc">
+                                                        <div class="titbox_con">
+                                                            <strong class="titbox_tit">title</strong> 
+                                                            <span class="publish">writer</span>
+                                                        </div>
+                                                        <div class="price_box">
+                                                            <span class="percent">30%</span>
+                                                            <span class="price">18,000</span>
+                                                            <span class="sal_price">20,000</span>
+                                                        </div>
+                                                        <div class="btn_wrap ty01_01_pop">
+                                                            <div class="fl">
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_basket"><span class="blind">삭제</span></button></div>
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_delate"><span class="blind">상세보기</span></button></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="book_item">
+                                                    <a href="javascript:;" class="img_box">
+                                                        <img src="../../asset/images/main/@bg_newbook_01.png" onerror="this.onerror=null; this.src='../../asset/images/main/img_noimage.svg'" alt="대체텍스트">
+                                                    </a>
+                                                    <div class="book_desc">
+                                                        <div class="titbox_con">
+                                                            <strong class="titbox_tit">title</strong> 
+                                                            <span class="publish">writer</span>
+                                                        </div>
+                                                        <div class="price_box">
+                                                            <span class="percent">30%</span>
+                                                            <span class="price">18,000</span>
+                                                            <span class="sal_price">20,000</span>
+                                                        </div>
+                                                        <div class="btn_wrap ty01_01_pop">
+                                                            <div class="fl">
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_basket"><span class="blind">삭제</span></button></div>
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_delate"><span class="blind">상세보기</span></button></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="book_item">
+                                                    <a href="javascript:;" class="img_box">
+                                                        <img src="../../asset/images/main/@bg_newbook_02.png" alt="대체텍스트">
+                                                    </a>
+                                                    <div class="book_desc">
+                                                        <div class="titbox_con">
+                                                            <strong class="titbox_tit">title</strong> 
+                                                            <span class="publish">writer</span>
+                                                        </div>
+                                                        <div class="price_box">
+                                                            <span class="percent">30%</span>
+                                                            <span class="price">18,000</span>
+                                                            <span class="sal_price">20,000</span>
+                                                        </div>
+                                                        <div class="btn_wrap ty01_01_pop">
+                                                            <div class="fl">
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_basket"><span class="blind">삭제</span></button></div>
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_delate"><span class="blind">상세보기</span></button></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="book_item">
+                                                    <a href="javascript:;" class="img_box">
+                                                        <img src="../../asset/images/main/@bg_newbook_03.png" alt="대체텍스트">
+                                                    </a>
+                                                    <div class="book_desc">
+                                                        <div class="titbox_con">
+                                                            <strong class="titbox_tit">title</strong> 
+                                                            <span class="publish">writer</span>
+                                                        </div>
+                                                        <div class="price_box">
+                                                            <span class="percent">30%</span>
+                                                            <span class="price">18,000</span>
+                                                            <span class="sal_price">20,000</span>
+                                                        </div>
+                                                        <div class="btn_wrap ty01_01_pop">
+                                                            <div class="fl">
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_basket"><span class="blind">삭제</span></button></div>
+                                                                <div class="btn_box"><button type="button" class="base_ico ico_delate"><span class="blind">상세보기</span></button></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pop_footer">
+                                    <a href="javascript:;" class="btn_close pop_close"><span class="blind">닫기</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //퀵메뉴팝업 -->
+                    </li>
+                    <li class="btn_gotop_box">
+                        <a href="javascript:;" class="btn_cir btn_gotop">
+                            <img src="../../asset/images/main/ico_btn_gotop.svg" alt="go top" class="goto_off">
+                            <img src="../../asset/images/main/ico_btn_gotop_on.svg" alt="go top" class="goto_on">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //퀵메뉴영역 -->
+        <!-- 푸터영역 -->
+        <div class="footer_area view">
+            <div class="footer_notice">
+                <div class="wrap">
+                    <h2 class="notice_tit">공지사항</h2>
+                    <div class="notice_con">
+                        <div class="swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" class="notice_item">
+                                        <span class="notice_day">2022.11.28</span>
+                                        <div class="notice_txt">학술정보 해외도서 쇼핑몰 오픈합니다.학술정보 해외도서 쇼핑몰 오픈합니다.학술정보 해외도서 쇼핑몰 오픈합니다.학술정보 해외도서 쇼핑몰 오픈합니다.학술정보 해외도서 쇼핑몰 오픈합니다.학술정보 해외도서 쇼핑몰 오픈합니다.</div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" class="notice_item">
+                                        <span class="notice_day">2022.12.28</span>
+                                        <div class="notice_txt">학술정보 해외도서 쇼핑몰 오픈합니다.</div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" class="notice_item">
+                                        <span class="notice_day">2023.01.28</span>
+                                        <div class="notice_txt">학술정보 해외도서 쇼핑몰 오픈합니다.</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-indicator">
+                            <button class="swiper-button-prev"><span class="blind">이전</span></button>
+                            <button class="swiper-button-next"><span class="blind">다음</span></button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="wrap">
+                    <div class="footer_info">
+                        <ul class="footer_link">
+                            <li class="personal">개인정보처리방침</li>
+                            <li>이용약관</li>
+                        </ul>
+                        <ul class="footer_address">
+                            <li>서울 금천구 가산디지털1로 145 가산디지털 3단지 <br class="mob_visible">에이스하아엔트 3차 801호</li>
+                            <li>Tel : 02-2624-1333-7</li>
+                        </ul>
+                        <p class="footer_copy">Copyright Haksul Intellgence. All Right Reserved</p>
+                    </div>
+                    <div class="footer_service">
+                        <strong class="service_tel"><span class="ico_bubble">고객센터</span>02-322-2426</strong>
+                        <ul class="service_desc">
+                            <li>월~금 10:00~18:00 (점심시간 11:30~13:30)</li>
+                            <li>토 · 일 및 공휴일 휴무</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //푸터영역 -->
+    </div>
+    <script src="../../asset/js/jquery-3.6.0.min.js"></script>
+    <script src="../../asset/js/swiper.min.js"></script>
+    <script src="../../asset/js/common.js"></script>
+</body>
+</html>

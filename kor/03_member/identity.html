@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>identity &lt; Journal Intelligence</title>
+    <link rel="stylesheet" href="../../asset/css/swiper.min.css">
+    <link rel="stylesheet" href="../../asset/css/common.css">
+    <link rel="stylesheet" href="../../asset/css/layout.css">
+    <link rel="stylesheet" href="../../asset/css/sub.css">
+
+</head>
+<body>
+    <div class="wrapper wrapper_ty01">
+        <!-- 헤더영역 -->
+        <div class="header_top">
+            <div class="header">
+                <div class="wrap member_logo">
+                    <h1 class="logo"><a href="javascript:;" title="메인으로 가기"><img src="../../asset/images/main/img_logo.svg" alt="Journal Intelligence"></a></h1>
+                </div>
+            </div>
+        </div>
+        <!-- //헤더영역 -->
+        <!-- 바디영역 -->
+        <div class="body">
+            <!-- 컴포넌트: 회원가입>본인인증 -->
+            <!-- DESC : 인풋 메시지 결과에 따라 클래스 추가
+                - 인풋 메시지 값이 있을 시 : succes 추가
+                - 인풋 메시지 값이 없을 시 : fail 추가
+                - 인풋 default 값이 있을 때 : default
+            -->
+            <div class="member_wrap find_id">
+                <div class="member_cont">
+                    <div class="member_txt_box">
+                        <p class="member_tit">회원가입</p>
+                        <div class="proce">
+                            <ul>
+                                <li class="choice">
+                                </li>
+                                <li class="reject">
+                                </li>
+                                <li class="reject">
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="member_acc">본인인증<br>
+                        </p>
+                    </div>
+                    <div class="form_btn">
+                        <div class="sel_type_box">
+                            <button type="button" class="btn_sel_type" id="phone">
+                                <span class="ico_phone"></span>
+                                <span class="text">휴대폰 본인인증</span>
+                            </button>
+                            <button type="button" class="btn_sel_type" id="ipin">
+                                <span class="ico_ipin"></span><span class="text">아이핀 본인인증</span>
+                            </button>
+                        </div>
+                        <div class="desc_gray tac">
+                            본인인증이 잘 되지 않을 경우,<br> 
+                            고객센터와 온라인 1:1 문의를 통해 접수해 주세요.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //컴포넌트: 회원가입>본인인증 -->
+            <!-- 컴포넌트: 회원가입>회원가입 -->
+            <div class="member_wrap find_id">
+                <div class="member_cont">
+                    <div class="member_txt_box">
+                        <p class="member_tit">회원가입</p>
+                        <div class="proce">
+                            <ul>
+                                <li class="reject">
+                                </li>
+                                <li class="choice">
+                                </li>
+                                <li class="reject">
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="member_acc">회원정보 입력</p>
+                    </div>
+                    <ul class="form_wrap">
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_id">아이디</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="text" name="label_id" id="label_id" class="input_ty01" placeholder="아이디를 입력해주세요">
+                                <div class="input_msg">
+                                    <span class="succes">입력값의 오류가 없습니다.</span>
+                                    <span class="fail">이름을 입력해 주세요.</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_pw" >비밀번호</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="password" name="label_pw" id="label_pw" class="input_ty01" placeholder="비밀번호를 입력해주세요">
+                                <div class="input_msg">
+                                    <span class="default">※ 영문/숫자 조합으로 8 ~ 12자리로만 가능합니다.</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_pw_check">비밀번호 확인</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="password" name="label_pw_check" id="label_pw_check" class="input_ty01" placeholder="비밀번호를 입력해주세요.">
+                                <div class="input_msg">
+                                    <span>입력값의 오류가 없습니다.</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_name">이름</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="text" name="label_name" id="label_name" class="input_ty01" disabled = "disabled" value="독고왕">
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_phone">휴대폰번호</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="tel" name="label_phone" id="label_phone" class="input_ty01" disabled = "disabled">
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="postcode">주소</label>
+                            </div>
+                            <ul class="form_address">
+                                <li>
+                                    <input type="text" name="postcode" id="postcode" class="input_ty02" placeholder="우편번호를 검색해주세요." title="주소">
+                                    <button type="button" class="base_m black fr" value="우편번호 찾기"><span>우편번호 검색</span></button>
+                                </li>
+                                <li>
+                                    <input type="text" name="address" id="address" class="input_ty01" title="주소내용01">
+                                </li>
+                                <li>
+                                    <input type="text" name="detailAddress" id="detailAddress" class="input_ty01" title="주소내용02">
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_email">이메일</label>
+                            </div>
+                            <ul class="form_address">
+                                <li>
+                                    <input type="email" name="label_email" id="label_email" class="input_ty02" placeholder="이메일을 입력해주세요.">
+                                    <button type="button" class="base_m black fr" value="우편번호 찾기"><span>인증번호 발송</span></button>
+                                    <div class="input_msg">
+                                        <span class="succes">입력값의 오류가 없습니다.</span>
+                                        <span class="fail">이름을 입력해 주세요.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="form_chkbox">
+                            <p class="member_acc inline">서비스 이용약관 동의</p>
+                            <div class="form_chkWrap">
+                                <div class="form_chk">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span><strong>약관 전체 동의</strong></span>
+                                    </label>
+                                </div>
+                                <ul class="form_chk_list">
+                                    <li class="form_chk">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span><strong class="mem_main_color">[필수]</strong> 학술정보 해외도서 쇼핑몰 이용약관</span>
+                                        </label>
+                                        <a class="txt_view" href="javascript:;">내용보기</a>
+                                    </li>
+                                    <li class="form_chk">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span><strong class="mem_main_color">[필수]</strong> 개인정보 수집 및 이용 동의</span>
+                                        </label>
+                                        <a class="txt_view" href="javascript:;">내용보기</a>
+                                    </li>
+                                    <li class="form_chk">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span><strong class="mem_main_color">[선택]</strong> 학술정보 해외도서 쇼핑몰 마케팅 수신동의</span>
+                                        </label>
+                                        <ul>
+                                            <li>
+                                                <span class="form_chk bg_none">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>SMS 수신동의</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="form_chk bg_none">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span>E-MAIL 수신동의</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn_wrap ty01_03_col btn_mg">
+                        <div class="fl">
+                            <div class="btn_box">
+                                <button type="button" class="base_l orange">
+                                    <span>회원가입</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //컴포넌트: 회원가입>회원가입 -->
+            <!-- 컴포넌트: 회원가입>회원가입완료 -->
+            <div class="member_wrap find_id">
+                <div class="member_txt_box">
+                    <p class="member_tit">회원가입</p>
+                    <div class="proce last">
+                        <ul>
+                            <li class="reject">
+                            </li>
+                            <li class="reject">
+                            </li>
+                            <li class="choice">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pop_body">
+                    <div class="pop_contents">
+                        <div class="desc_tit check_success">
+                            반갑습니다. <span class="mem_main_color">독고왕</span> 님!<br>
+                            회원이 되신 것을 축하드립니다.
+                        </div>
+                        <div class="desc_gray tac">서비스에 회원가입해주셔서 대단히 감사합니다.<br>
+                            항상 노력하는 학술정보 해외도서가 될 수 있도록<br>
+                            최선을 다하겠습니다.
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrap ty01_03_row btn_mg">
+                    <div class="fc">
+                        <div class="btn_box"><button type="button" class="base_l white"><span>메인</span></button></div>
+                        <div class="btn_box"><button type="button" class="base_l orange"><span>로그인</span></button></div>
+                    </div>
+                </div>
+            </div>
+            <!-- //컴포넌트: 회원가입>회원가입완료 -->
+            <!-- 컴포넌트: 내정보수정>비밀번호확인 -->
+            <div class="member_wrap find_id">
+                <div class="member_txt_box">
+                    <p class="member_tit">비밀번호를 한번 더 입력해주세요.</p>
+                </div>
+                <div class="pop_body">
+                    <div class="pop_contents">
+                        <div class="desc_tit check_success">
+                            회원님의 정보를 안전하게 보호하기 위해<br>
+                            <span class="mem_main_color">비밀번호를 한번 더 확인</span>합니다.
+                        </div>
+                    </div>
+                </div>
+                <div class="form_box">
+                    <div class="form_title">
+                        <label for="label_phone">비밀번호</label>
+                    </div>
+                    <div class="form_input">
+                        <input type="tel" name="label_phone" id="label_phone" class="input_ty01" placeholder="">
+                        <div class="input_msg">
+                            <span class="succes">입력값의 오류가 없습니다.</span>
+                            <span class="fail">이름을 입력해 주세요.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrap ty01_03_row btn_mg">
+                    <div class="fc">
+                        <div class="btn_box"><button type="button" class="base_l white"><span>돌아가기</span></button></div>
+                        <div class="btn_box"><button type="button" class="base_l orange"><span>확인</span></button></div>
+                    </div>
+                </div>
+            </div>
+            <!-- //컴포넌트: 내정보수정>비밀번호확인 -->
+            <!-- 컴포넌트: 내정보수정>내정보수정 -->
+            <div class="member_wrap find_id">
+                <div class="member_cont">
+                    <div class="member_txt_box">
+                        <p class="member_tit">내 정보 수정</p>
+                        <p class="member_acc">회원정보 입력</p>
+                    </div>
+                    <ul class="form_wrap">
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_id">아이디</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="text" name="label_id" id="label_id" class="input_ty01" placeholder="아이디를 입력해주세요" disabled="disabled" value="aedfwqefw">
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_pw">비밀번호</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="password" name="label_pw" id="label_pw" class="input_ty01" placeholder="비밀번호를 입력해 주세요.">
+                                <div class="input_msg">
+                                    <span class="default">※ 영문/숫자 조합으로 8 ~ 12자리로만 가능합니다.</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_pw_check" >비밀번호 확인</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="password" name="label_pw_check" id="label_pw_check" class="input_ty01" placeholder="비밀번호를 입력해 주세요.">
+                                <div class="input_msg">
+                                    <span class="succes">입력값의 오류가 없습니다.</span>
+                                    <span class="fail">이름을 입력해 주세요.</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_name" >이름</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="text" name="label_name" id="label_name" class="input_ty01" disabled = "disabled" placeholder="" value="독고왕">
+                                <div class="input_msg">
+                                    <span class="succes">입력값의 오류가 없습니다.</span>
+                                    <span class="fail">이름을 입력해 주세요.</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_phone">휴대폰번호</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="tel" name="label_phone" id="label_phone" class="input_ty01" placeholder="">
+                                    <div class="input_msg">
+                                        <span class="succes">입력값의 오류가 없습니다.</span>
+                                        <span class="fail">이름을 입력해 주세요.</span>
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_bank">계좌정보</label>
+                            </div>
+                            <div class="form_ipt_sel Bank">
+                                <div class="form_selwrap">
+                                    <a href="javascript:;" class="sel_btn">은행선택</a>
+                                    <div class="option" style="display: none;">
+                                        <label><input type="radio" name="sel_sample01" value="0"><span>농협</span></label>
+                                        <label><input type="radio" name="sel_sample01" value="1"><span>국민은행</span></label>
+                                        <label><input type="radio" name="sel_sample01" value="2"><span>신한은행</span></label>
+                                        <label><input type="radio" name="sel_sample01" value="3"><span>우리은행</span></label>
+                                    </div>
+                                </div>
+                                <div class="form_input">
+                                    <input type="text" name="label_bank" id="label_bank" class="input_ty01" placeholder="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="postcode">주소</label>
+                            </div>
+                            <ul class="form_address">
+                                <li>
+                                    <input type="text" name="postcode" id="postcode" class="input_ty02" placeholder="우편번호를 검색해주세요." title="주소">
+                                    <button type="button" class="base_m black fr" value="우편번호 찾기"><span>우편번호 검색</span></button>
+                                </li>
+                                <li>
+                                    <input type="text" name="address" id="address" class="input_ty01" title="주소내용01">
+                                </li>
+                                <li>
+                                    <input type="text" name="detailAddress" id="detailAddress" class="input_ty01" title="주소내용02">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="btn_wrap ty01_03_row btn_mg">
+                        <div class="fc">
+                            <div class="btn_box"><button type="button" class="base_l white"><span>취소</span></button></div>
+                            <div class="btn_box"><button type="button" class="base_l orange"><span>확인</span></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //컴포넌트: 내정보수정>내정보수정 -->
+        </div>
+        <!-- //바디영역 -->
+        <!-- 푸터영역 -->
+        <div class="footer_area">
+            <div class="footer_member">
+                <div class="wrap">
+                    <p class="footer_copy">© Haksul Intellgence. All Right Reserved</p>            
+                </div>
+            </div>
+        </div>
+        <!-- //푸터영역 -->
+    </div>
+    <script src="../../asset/js/jquery-3.6.0.min.js"></script>
+    <script src="../../asset/js/swiper.min.js"></script>
+    <script src="../../asset/js/common.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</body>
+</html>
