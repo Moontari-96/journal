@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find_id &lt; Journal Intelligence</title>
+    <link rel="stylesheet" href="../../asset/css/swiper.min.css">
+    <link rel="stylesheet" href="../../asset/css/common.css">
+    <link rel="stylesheet" href="../../asset/css/layout.css">
+    <link rel="stylesheet" href="../../asset/css/sub.css">
+
+</head>
+<body>
+    <div class="wrapper wrapper_ty01">
+        <!-- 헤더영역 -->
+        <div class="header_top">
+            <div class="header">
+                <div class="wrap member_logo">
+                    <h1 class="logo"><a href="javascript:;" title="메인으로 가기"><img src="../../asset/images/main/img_logo.svg" alt="Journal Intelligence"></a></h1>
+                </div>
+            </div>
+        </div>
+        <!-- //헤더영역 -->
+        <!-- 바디영역 -->
+        <div class="body">
+            <div class="member_wrap find_id">
+                <!-- 아이디 비밀번호 찾기 탭 -->
+                <div class="find_tap_warp">
+                    <ul class="tab_list">
+                        <li class="is_active tab_id">
+                            <a href="#tabFind_id">
+                                <span>아이디 찾기</span>
+                            </a>
+                        </li>
+                        <li class="tab_pw">
+                            <a href="#tabFind_pw">
+                                <span>비밀번호 찾기</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //아이디 비밀번호 찾기 탭 -->
+                <!-- 폼 영역 -->
+                <div class="tab_panel_list">
+                    <!-- 아이디 찾기 -->
+                    <div id="tabFind_id" class= "is_active">
+                        <ul class="form_wrap form_wrap_id">
+                            <!-- DESC : 인풋 메시지 결과에 따라 클래스 추가
+                                - 인풋 메시지 값이 있을 시 : succes 추가
+                                - 인풋 메시지 값이 없을 시 : fail 추가
+                                - 인풋 default 값이 있을 때 : default
+                            -->
+                            <li class="form_box">
+                                <div class="form_title">
+                                    <label for="label_name">이름</label>
+                                </div>
+                                <div class="form_input">
+                                    <input type="text" name="label_name" id="label_name" class="input_ty01" placeholder="이름을 입력해 주세요.">
+                                    <div class="input_msg">
+                                        <span class="succes">입력값의 오류가 없습니다.</span>
+                                        <span class="fail">이름을 입력해 주세요.</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="form_box">
+                                <div class="form_title">
+                                    <label for="label_birth">생년월일</label>
+                                </div>
+                                <div class="form_input">
+                                    <input type="text" name="label_birth" id="label_birth" class="input_ty01" placeholder="생년월일을 입력해 주세요.">
+                                    <div class="input_msg">
+                                        <span class="fail">생년월일을 입력해 주세요.</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="form_box">
+                                <div class="form_title">
+                                    <label for="label_phone">휴대폰번호</label>
+                                </div>
+                                <div class="form_input">
+                                    <input type="tel" name="label_phone" id="label_phone" class="input_ty01" placeholder="숫자만 입력해 주세요." maxlength="11">
+                                    <div class="input_msg">
+                                        <span class="succes">입력값의 오류가 없습니다.</span>
+                                        <span class="fail">이름을 입력해 주세요.</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                       <div class="btn_wrap ty01_03_col btn_mg">
+                            <div class="fl">
+                                <div class="btn_box"><button type="button" class="base_l orange disable id_search"><span>확인</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //아이디 찾기 -->
+                    <!-- 비밀번호 찾기 -->
+                    <div id="tabFind_pw">
+                        <ul class="form_wrap">
+                            <li class="form_box">
+                                <div class="form_title">
+                                    <label for="label_id">아이디</label>
+                                </div>
+                                <div class="form_input">
+                                    <input type="text" name="label_id" id="label_id" class="input_ty01" placeholder="아이디를 입력해주세요">
+                                    <div class="input_msg">
+                                        <span class="succes">입력값의 오류가 없습니다.</span>
+                                        <span class="fail">이름을 입력해 주세요.</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="form_box">
+                                <div class="form_title">
+                                    <label for="label_name">이름</label>
+                                </div>
+                                <div class="form_input">
+                                    <input type="text" name="label_name" id="label_name" class="input_ty01" placeholder="이름을 입력해 주세요.">
+                                    <div class="input_msg">
+                                        <span class="succes">입력값의 오류가 없습니다.</span>
+                                        <span class="fail">이름을 입력해 주세요.</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="form_box">
+                                <div class="form_title">
+                                    <label for="label_birth">생년월일</label>
+                                </div>
+                                <div class="form_input">
+                                    <input type="text" name="label_birth" id="label_birth" class="input_ty01" placeholder="생년월일을 입력해 주세요.">
+                                    <div class="input_msg">
+                                        <span class="succes">입력값의 오류가 없습니다.</span>
+                                        <span class="fail">이름을 입력해 주세요.</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="form_box">
+                                <div class="form_title">
+                                    <label for="label_phone" >휴대폰번호</label>
+                                </div>
+                                <div class="form_input">
+                                    <input type="tel" name="label_phone" id="label_phone" class="input_ty01" placeholder="숫자만 입력해 주세요." maxlength="11">
+                                    <div class="input_msg">
+                                        <span class="succes">입력값의 오류가 없습니다.</span>
+                                        <span class="fail">이름을 입력해 주세요.</span>
+                                    </div>
+                                </div>
+                                <!-- DESC: 인증번호 재발송을 안보이게할 경우 .is_hidden 삽입해주세요. -->
+                                <ul class="form_address fail">
+                                    <li>
+                                        <div class="timer_box">
+                                            <input type="text" name="label_phone_chk" id="label_phone_chk" class="input_ty03" placeholder="인증번호 6자리" title="인증번호">
+                                            <span class="timer"></span>
+                                        </div>
+                                        <button type="button" class="base_m black fr recert_btn"><span>인증번호 재발송</span></button>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="btn_wrap ty01_03_col btn_mg form_btn_pw">
+                            <div class="fl">
+                                <div class="btn_box"><button type="button" class="base_l orange pw_search disable"><span>인증번호 발송</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //비밀번호 찾기 -->
+                </div>
+            </div>
+            <!-- //폼 영역 -->
+            <!-- 비밀번호 재설정 -->
+            <div class="member_wrap find_id">
+                <div class="member_cont">
+                    <div class="member_txt_box">
+                        <p class="member_tit">새로운 비밀번호 설정</p>
+                        <p class="member_acc center">인증되었습니다.<br>
+                            <span class="mem_main_color">새로운 비밀번호</span>를 설정해 주세요.
+                        </p>
+                    </div>
+                    <ul class="form_wrap">
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_pw" >새 비밀번호</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="password" name="label_pw" id="label_pw" class="input_ty01" placeholder="비밀번호를 입력해주세요">
+                                <div class="input_msg">
+                                    <span class="default">※ 영문/숫자 조합으로 8 ~ 12자리로만 가능합니다.</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="form_box">
+                            <div class="form_title">
+                                <label for="label_pw_check" >새 비밀번호 확인</label>
+                            </div>
+                            <div class="form_input">
+                                <input type="password" name="label_pw_check" id="label_pw_check" class="input_ty01" placeholder="비밀번호를 입력해 주세요.">
+                                    <div class="input_msg">
+                                        <span class="succes">입력값의 오류가 없습니다.</span>
+                                        <span class="fail">이름을 입력해 주세요.</span>
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="btn_wrap ty01_03_col btn_mg">
+                            <div class="fl">
+                                <div class="btn_box">
+                                    <button type="button" class="base_l orange" data-popup="pop_cart">
+                                        <span>확인</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //비밀번호 재설정 -->
+        </div>
+        <!-- //바디영역 -->
+        <!-- 푸터영역 -->
+        <div class="footer_area">
+            <div class="footer_member">
+                <div class="wrap">
+                    <p class="footer_copy">© Haksul Intellgence. All Right Reserved</p>            
+                </div>
+            </div>
+        </div>
+        <!-- //푸터영역 -->
+    </div>
+    <!-- 팝업01: 로그인  -->
+    <div class="pop_area pop_ty_01" data-popup-con="pop_cart">
+        <div class="pop_box">
+            <div class="pop_body">
+                <div class="pop_contents">
+                    <strong class="pop_subtit">비밀번호가 정상적으로 변경되었습니다.</strong>
+                    <p class="pop_txt">로그인으로 이동하시겠습니까?</p>
+                </div>
+            </div>
+            <div class="pop_footer">
+                <div class="btn_wrap">
+                    <div class="fc">
+                        <!-- X 모양 닫는 버튼이 아닐 경우: .pop_close을 부여하면 해당 팝업 닫힘 -->
+                        <div class="btn_box"><button type="button" class="base_l white pop_close"><span>메인</span></button></div>
+                        <div class="btn_box"><button type="button" class="base_l black pop_close"><span>이동하기</span></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업01: 로그인  -->
+    <script src="../../asset/js/jquery-3.6.0.min.js"></script>
+    <script src="../../asset/js/swiper.min.js"></script>
+    <script src="../../asset/js/common.js"></script>
+</body>
+</html>
